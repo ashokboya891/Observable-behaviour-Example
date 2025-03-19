@@ -1,0 +1,13 @@
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="person.name" name="name">
+  
+  <label for="Dept">Dept:</label>
+  <input type="text" id="Dept" [(ngModel)]="person.Dept" name="Dept">
+  
+  <label for="Fee">Fee:</label>
+  <input type="number" id="Fee" [ngModel]="person.Fee" (ngModelChange)="person.Fee = $event ? +$event : 0" name="Fee">
+
+  <button type="submit" (click)="save()">Save</button>
+  <button type="button" (click)="router.navigate(['/'])">Cancel</button>
+</form>

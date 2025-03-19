@@ -1,0 +1,23 @@
+<h2>Person List</h2>
+<button (click)="router.navigate(['/add'])">Add Person</button>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Dept</th>
+    <th>Fee</th>
+
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let person of persons$|async">
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.Dept }}</td>
+    <td>{{ person.Fee }}</td>
+
+    <td>
+      <button (click)="editPerson(person.id)">Edit</button>
+      <button (click)="deletePerson(person.id)">Delete</button>
+    </td>
+  </tr>
+</table>
