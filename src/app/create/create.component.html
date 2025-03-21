@@ -1,4 +1,4 @@
-<h2>{{ person.id === 0 ? 'Add' : 'Edit' }} Person</h2>
+<h2>Add New Person</h2>
 <form (ngSubmit)="savePerson()">
   <label>Name:</label>
   <input type="text" [(ngModel)]="person.name" name="name" required />
@@ -7,19 +7,7 @@
   <input type="text" [(ngModel)]="person.Dept" name="Dept" required />
 
   <label>Fee:</label>
-  <!-- <input type="number" [(ngModel)]="person.Fee" name="Fee" required /> -->
-
-  <input 
-    type="number" 
-    [ngModel]="person.Fee" 
-    (ngModelChange)="updateFee($event)" 
-    name="Fee" 
-    required
-  />
-  
-  
-  
-
+  <input type="number" [(ngModel)]="person.Fee" name="Fee" required />
 
   <button type="submit">Save</button>
 </form>

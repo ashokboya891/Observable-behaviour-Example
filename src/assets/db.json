@@ -8,15 +8,21 @@
     },
     {
       "id": 2,
-      "name": "Bob",
+      "name": "Bobs",
       "Dept": "ECE",
-      "Fee": 202
+      "Fee": 20
     },
     {
       "id": 3,
       "name": "Charlie-1",
       "Dept": "EEE",
       "Fee": 2000
+    },
+    {
+      "id": 4,
+      "name": "mike",
+      "Dept": "hb",
+      "Fee": 88
     }
   ]
 }

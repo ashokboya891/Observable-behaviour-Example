@@ -7,18 +7,22 @@ import { PersonService, Person } from 'src/app/servicews/PersonService'
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  standalone: true, // ✅ Mark as standalone
-  imports: [CommonModule], // ✅ Import CommonModule
+  // standalone: true, // ✅ Mark as standalone
+  // imports: [CommonModule], // ✅ Import CommonModule
   })
 export class HomeComponent implements OnInit {
   persons: Person[] = [];
   persons$ = this.personService.persons$; // ✅ Subscribe to observable
 
-  constructor(public router: Router, private personService: PersonService) {}
+  constructor(public router: Router, private personService: PersonService) {
+
+  }
 
 
   ngOnInit() {
     this.fetchPersons();
+    this.personService.fetchCsrfToken(); // ✅ Fetch CSRF token at the start
+
   }
 
   fetchPersons() {
